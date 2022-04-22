@@ -39,3 +39,29 @@ Fri Apr 22 02:45:20 HSP 2022:
  tests:  11|6
 total_score: 15/70
 2c3f94d
+Fri Apr 22 03:36:14 HSP 2022: 
+ treemap.c | 25 +++++++++++++++++++++++++
+ 1 file changed, 25 insertions(+)
+In file included from test.c:4:
+treemap.c: In function 'insertTreeMap':
+treemap.c:49:41: error: 'return' with a value, in function returning void [-Werror=return-type]
+   49 |     if (tree==NULL || key==NULL) return NULL;
+      |                                         ^~~~
+treemap.c:48:6: note: declared here
+   48 | void insertTreeMap(TreeMap * tree, void* key, void * value) {
+      |      ^~~~~~~~~~~~~
+treemap.c:54:17: error: suggest parentheses around assignment used as truth value [-Werror=parentheses]
+   54 |             if( tree->current->right=NULL){
+      |                 ^~~~
+treemap.c:64:17: error: suggest parentheses around assignment used as truth value [-Werror=parentheses]
+   64 |             if( tree->current->left=NULL){
+      |                 ^~~~
+treemap.c:71:21: error: 'return' with a value, in function returning void [-Werror=return-type]
+   71 |         else return NULL;
+      |                     ^~~~
+treemap.c:48:6: note: declared here
+   48 | void insertTreeMap(TreeMap * tree, void* key, void * value) {
+      |      ^~~~~~~~~~~~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+db01ea8
