@@ -52,22 +52,23 @@ void insertTreeMap(TreeMap * trklee, void* key, void * value) {
         while (trklee->current!=NULL)
         {
             if(trklee->lower_than(trklee->current->pair->key, key)){
-                if( trklee->current->left==NULL){
-                    trklee->current->left=par;
+                if( trklee->current->right->pair==NULL)
+                {
+                    trklee->current->right->pair=par->pair;
                     par->parent=trklee->current;
                     trklee->current=par;
                 }
-                else trklee->current=trklee->current->left;
+                else trklee->current=trklee->current->right;
             
             }
             else
             {
-                if( trklee->current->right==NULL){
-                    trklee->current->right=par;
+                if( trklee->current->left->pair==NULL){
+                    trklee->current->left->pair=par->pair;
                     par->parent=trklee->current;
                     trklee->current=par;
                 }   
-                else trklee->current=trklee->current->right;
+                else trklee->current=trklee->current->left;
             }
         }
     }
