@@ -170,19 +170,19 @@ Pair * firstTreeMap(TreeMap * tree) {
 }
 
 Pair * nextTreeMap(TreeMap * tree) {
-    while (tree!=NULL && tree->current!=NULL)
+    while (tree!=NULL)
     {
         if(tree->current->right!=NULL){   
             TreeNode *aux=minimum(tree->current->right);
-            if(is_equal(tree, tree->current->pair->key, aux->pair->key)) return NULL;
             tree->current=aux;
             return aux->pair;
         }
         else{
-            while (tree->current!=NULL)
+            TreeNode *aux=tree->current->parent;
+            while (aux!=NULL)
             {
-                TreeNode *aux=tree->current->parent;
                 if(tree->lower_than(tree->current->pair->key, aux->pair->key)){
+                    tree->current=aux;
                     return aux->pair;
                 }
                 else aux=aux->parent;
