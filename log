@@ -366,3 +366,14 @@ Sat Apr 23 01:46:28 HSP 2022:
  tests:  20|2
 total_score: 45/70
 09fc883
+Sat Apr 23 01:47:43 HSP 2022: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+treemap.c: In function 'nextTreeMap':
+treemap.c:177:16: error: implicit declaration of function 'lower_than_int' [-Werror=implicit-function-declaration]
+  177 |             if(lower_than_int(tree->current->pair->key,aux->pair->key)) return NULL;
+      |                ^~~~~~~~~~~~~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+eab6dac
