@@ -173,11 +173,12 @@ Pair * nextTreeMap(TreeMap * tree) {
     while (tree!=NULL)
     {
         if(tree->current->right!=NULL){
+            if (minimum(tree->current->right)==NULL) return NULL;    
             tree->current=minimum(tree->current->right);
             return tree->current->pair;
         }
         else{
-            while (tree->current->parent!=NULL)
+            while (tree->current!=NULL)
             {
                 if(tree->current->parent->pair->key>tree->current->pair->key) return tree->current->parent->pair;
                 else tree->current=tree->current->parent;
