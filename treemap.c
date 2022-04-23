@@ -170,7 +170,7 @@ Pair * firstTreeMap(TreeMap * tree) {
 }
 
 Pair * nextTreeMap(TreeMap * tree) {
-    while (tree!=NULL)
+    while (tree!=NULL && tree->current!=NULL)
     {
         if(tree->current->right!=NULL){
             if (minimum(tree->current->right)==NULL) return NULL;    
@@ -187,6 +187,5 @@ Pair * nextTreeMap(TreeMap * tree) {
         }
         return NULL;
     }
-    
     return NULL;
 }
