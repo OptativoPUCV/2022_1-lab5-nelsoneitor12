@@ -95,54 +95,8 @@ TreeNode * minimum(TreeNode * x){
 
 
 void removeNode(TreeMap * tree, TreeNode* node) {
-    TreeNode *aux=node;
-    while (tree!=NULL)
-    {
-        if(aux->left==NULL && aux->right==NULL){
-            if(is_equal(tree, aux->parent->left->pair->key, aux->pair->key)){ 
-                aux->parent->left=NULL;
-                tree->current=aux->parent;
-                return;
-            }
-            else{
-                 aux->parent->right=NULL;
-                 tree->current=aux->parent;
-                 return;
-            }
-            
-        }    
-        else if(aux->left==NULL || aux->right==NULL)
-        {
-            if (aux->left==NULL)
-            {
-                if(is_equal(tree, aux->parent->right->pair->key, aux->pair->key)) aux->parent->right=aux->right;
-                else aux->parent->left=aux->right;
-                aux->right->parent=aux->parent;
-                tree->current=aux->right;
-                return;
-            }
-            else{
-                if(is_equal(tree, aux->parent->right->pair->key, aux->pair->key)) aux->parent->right=aux->left;
-                else aux->parent->left=aux->left;
-                aux->left->parent=aux->parent;
-                tree->current=aux->left;
-                return;
-            }
-            
-        }
-        else{
-            aux=minimum(aux->right);
-            node->left=aux->left;
-            node->pair= aux->pair;
-            node->parent=aux->parent;
-            node->right= aux->right;
-            removeNode(tree, aux);
-            tree->current=node;
-            return;
-        }
-
-    }
     
+
 }
 
 void eraseTreeMap(TreeMap * tree, void* key){
