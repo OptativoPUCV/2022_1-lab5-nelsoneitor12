@@ -222,3 +222,8 @@ treemap.c:131:33: error: expected ';' before 'node'
       |             ~~~~                 
 Compilation failed
 bb89625
+Fri Apr 22 23:47:45 HSP 2022: 
+ treemap.c | 7 ++++++-
+ 1 file changed, 6 insertions(+), 1 deletion(-)
+ tests:  0|0
+1a31b1b
