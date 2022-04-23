@@ -173,8 +173,8 @@ Pair * nextTreeMap(TreeMap * tree) {
     while (tree!=NULL)
     {
         if(tree->current->right!=NULL){   
-            tree->current=minimum(tree->current->right);
-            if(tree->current->pair==NULL) return NULL;
+            TreeNode *aux=minimum(tree->current->right);
+            if(tree->current->pair->key>aux->pair->key) return NULL;
             return tree->current->pair;
         }
         else{
