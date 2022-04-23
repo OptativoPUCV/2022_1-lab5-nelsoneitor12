@@ -173,9 +173,9 @@ Pair * nextTreeMap(TreeMap * tree) {
     while (tree!=NULL)
     {
         if(tree->current->right!=NULL){   
-            TreeNode *aux=minimum(tree->current->right);
-            tree->current=aux;
-            return aux->pair;
+            //TreeNode *aux=minimum(tree->current->right);
+            tree->current=minimum(tree->current->right);
+            return tree->current->pair;
         }
         else{
             while (tree->current!=NULL)
