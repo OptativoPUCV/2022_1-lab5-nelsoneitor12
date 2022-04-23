@@ -174,7 +174,7 @@ Pair * nextTreeMap(TreeMap * tree) {
     {
         if(tree->current->right!=NULL){   
             TreeNode *aux=minimum(tree->current->right);
-            printf("%d\n" ,aux->pair->key);
+            printf("%d\n" ,(int)aux->pair->key);
             return aux->pair;
         }
         else{
