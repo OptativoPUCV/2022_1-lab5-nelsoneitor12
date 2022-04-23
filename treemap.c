@@ -170,7 +170,7 @@ Pair * firstTreeMap(TreeMap * tree) {
 }
 
 Pair * nextTreeMap(TreeMap * tree) {
-    while (tree!=NULL)
+    while (tree!=NULL && tree->current!=NULL)
     {
         if(tree->current->right!=NULL){   
             TreeNode *aux=minimum(tree->current->right);
