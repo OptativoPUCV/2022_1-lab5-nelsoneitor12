@@ -479,3 +479,17 @@ Sat Apr 23 02:58:50 HSP 2022:
  tests:  22|2
 total_score: 50/70
 41af8af
+Sat Apr 23 03:05:50 HSP 2022: 
+ treemap.c | 1 +
+ 1 file changed, 1 insertion(+)
+In file included from test.c:4:
+treemap.c: In function 'nextTreeMap':
+treemap.c:177:22: error: format '%d' expects argument of type 'int', but argument 2 has type 'Pair *' {aka 'struct Pair *'} [-Werror=format=]
+  177 |             printf("%d\n" ,aux->pair);
+      |                     ~^     ~~~~~~~~~
+      |                      |        |
+      |                      int      Pair * {aka struct Pair *}
+treemap.c:177:22: error: format '%d' expects argument of type 'int', but argument 2 has type 'Pair *' {aka 'struct Pair *'} [-Werror=format=]
+cc1.exe: all warnings being treated as errors
+Compilation failed
+86e3c95
