@@ -524,3 +524,9 @@ treemap.c:177:28: error: cast from pointer to integer of different size [-Werror
 cc1.exe: all warnings being treated as errors
 Compilation failed
 0185566
+Sat Apr 23 03:10:13 HSP 2022: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  23|2
+total_score: 50/70
+8ea2375
