@@ -209,3 +209,16 @@ Fri Apr 22 23:34:00 HSP 2022:
  1 file changed, 1 insertion(+), 1 deletion(-)
  tests:  0|0
 1a87d38
+Fri Apr 22 23:46:07 HSP 2022: 
+ treemap.c | 7 +++----
+ 1 file changed, 3 insertions(+), 4 deletions(-)
+In file included from test.c:4:
+treemap.c: In function 'removeNode':
+treemap.c:131:33: error: expected ';' before 'node'
+  131 |             node->left=aux->left
+      |                                 ^
+      |                                 ;
+  132 |             node->pair= aux->pair;
+      |             ~~~~                 
+Compilation failed
+bb89625
