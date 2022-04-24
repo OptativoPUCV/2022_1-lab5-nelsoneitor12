@@ -157,7 +157,7 @@ Pair * searchTreeMap(TreeMap * tree, void* key) {
 
 Pair * upperBound(TreeMap * tree, void* key) {
     if(searchTreeMap(tree, key)) return searchTreeMap(tree, key);
-    TreeNode *ub=NULL;
+    TreeNode *ub=(TreeNode*) malloc(sizeof(TreeNode));
     TreeNode *aux=tree->root;
     while ( aux!= NULL)
     {
