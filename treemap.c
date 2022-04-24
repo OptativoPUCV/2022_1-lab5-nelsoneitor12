@@ -169,9 +169,9 @@ Pair * upperBound(TreeMap * tree, void* key) {
         }
         else
         {   
-            if(aux->right==NULL) return ub->pair;
             aux = aux->right; 
         }
+        return ub->pair;
     }
     return NULL;
 }
